@@ -1,0 +1,409 @@
+--------------------
+ip address
+---------------------
+r1 = self.r1
+r2 = self.r2
+host = self.host
+host_ifaces = list(host.config.get_swp_interfaces().values())
+host_ifaces[0].ip.address.append(IPv4Interface(u"40.1.1.2/24" ))
+host_ifaces[0].ip.gateway.append(IPv4Address(u"40.1.1.1"))
+host.config.render_full_config()
+
+
+==========
+Admin down
+===========
+ cfg_log_msg.debug("*****Admin down and admin up of outgoing Interface *****")
+                intf_obj = node.config.get_swp_interfaces()[l3_out_port]
+                intf_obj.link.state = 'down'
+                nvue_config_apply(node) -> nv config apply startup
+                sleep(5)
+#bring up
+                intf_obj.link.state = 'up'
+                nvue_config_apply(node) ->nv config apply startup
+                sleep(5)
+				
+============
+Adding bridge
+==============
+
+ bridge=node.config.add_bridge("br%d"%index)
+ bridge.eni_snippet.append("bridge-stp on")
+           
+          
+            svi_temp = node.config.add_svi_interface("vlan"+str(1))
+            svi_temp.base_interface = bridge
+            svi_temp.vlan = 1
+            svi_temp.ip.address.extend(addrs)
+            
+            for swp_obj in ifaces:
+                swp_br = swp_obj.add_bridges(bridge.name)
+				
+=============
+route map
+=============
+ route_map = policy.add_route_map('NHT')
+        rule = route_map.add_rule(10)
+        rule.action.permit
+        rule.match.type = 'ipv4'
+        rule.match.ip_prefix_list = 'IBGP_LOOPBACKS'
+        rule.match.ip_prefix_length = 32
+        rule.match.source_protocol = 'ospf'				
+				
+================
+BGP config
+================
+
+node = self.node_from_name("r%d" % x)
+rid = u"8.0.0.%d" % x
+bgp_conf = node.config.add_router()
+bgp_conf.bgp.enable = 'on'
+all_vrfs = node.config.get_vrf_interfaces()
+bgp_vrf = all_vrfs.get('default', None)
+if not bgp_vrf:
+    bgp_vrf = node.config.add_vrf(name='default')
+bgp_vrf.router.bgp.enable = "on"
+#bgp_vrf.router.bgp.router_id = node.config.get_loopback_interfaces().values()[0].ip.address[0].ip
+bgp_vrf.router.bgp.router_id = IPv4Address(u"%d.1.1.1" % node.asn)
+bgp_vrf.router.bgp.autonomous_system =  node.asn
+bgp_vrf.router.bgp.address_family.ipv4_unicast.enable = 'on'
+net_id = "8.0.0.%d/32" % x
+bgp_vrf.router.bgp.address_family.ipv4_unicast.add_network(net_id)
+bgp_add_neig = bgp_vrf.router.bgp.add_neighbor(neighbor_id="%s" % str("1.1.1.1"))
+
+node.snippet_cmds = list()  
+node.snippet_cmds.append("router bgp 200 \n neighbor IBGP peer-group \n neighbor IBGP remote-as 200 \n neighbor IBGP update-source lo \n exit")
+node.config.system.snippet.frr_conf=node.snippet_cmds[0]
+node.config.render_full_config()
+node.device.sudo("nv config apply startup -y")
+
+
+def bgp_config(node, asn, router_id, phy_ifaces, sub_ifaces):
+            bgp_conf = node.config.add_router()
+            bgp_conf.bgp.enable = 'on'
+            bgp_conf.bgp.autonomous_system = asn
+            bgp_conf.bgp.router_id = IPv4Address(router_id)
+            bgp_vrf_conf = node.config.add_vrf('vrf1')
+            bgp = bgp_vrf_conf.router.bgp
+            bgp.enable = 'on'
+            bgp.address_family.ipv4_unicast.enable = 'on'
+            bgp.address_family.ipv4_unicast.redistribute.connected.enable = 'on'
+            bgp.address_family.ipv6_unicast.enable = 'on'
+            bgp.address_family.ipv6_unicast.redistribute.connected.enable = 'on'
+            bgp.add_peer_group('fabric')
+            neigh_conf = bgp.add_neighbor(neighbor_id=phy_ifaces[0].name)
+            neigh_conf.enable = 'on'
+            neigh_conf.address_family.ipv6_unicast.enable = 'on'
+            neigh_conf.type = 'unnumbered'
+            neigh_conf.peer_group = bgp.peer_group.keys()[0]
+            neigh_conf.remote_as = 'external'
+            index = 2
+            for iface in sub_ifaces:
+                if 'swp1.' in iface.name:
+                    bgp_vrf_conf_sub = node.config.add_vrf('vrf' + str(index))
+                    bgp = bgp_vrf_conf_sub.router.bgp
+                    bgp.enable = 'on'
+                    bgp.address_family.ipv4_unicast.enable = 'on'
+                    bgp.address_family.ipv4_unicast.redistribute.connected.enable = 'on'
+                    bgp.address_family.ipv6_unicast.enable = 'on'
+                    bgp.address_family.ipv6_unicast.redistribute.connected.enable = 'on'
+                    bgp.add_peer_group('fabric')
+                    neigh_conf = bgp.add_neighbor(neighbor_id=iface.name)
+                    neigh_conf.enable = 'on'
+                    neigh_conf.type = 'unnumbered'
+                    neigh_conf.address_family.ipv6_unicast.enable = 'on'
+                    neigh_conf.peer_group = bgp.peer_group.keys()[0]
+                    neigh_conf.remote_as = 'external'
+                    index +=1
+		bgp_add_neig.address_family.ipv4_unicast.nexthop_setting="self"
+            
+=================
+To check commands
+=================
+nv list-commands | grep next		
+
+r1.sudo('nv config show -o commands')
+r1.sudo('nv config apply empty --assume-yes')
+nv config diff
+
+========
+ospfd
+========
+node.frr_daemons= list()
+node.frr_daemons.append("ospf6d=yes")
+node.frr_daemons.append("ospfd=yes")
+node.frr_daemons.append("bgpd=yes")
+node.config.system.snippet.frr_daemons = '\n'.join(node.frr_daemons)
+
+========
+OSPF
+========
+ospf_router = node.config.add_router()
+            ospf_router.ospf.enable='on'
+            ospf_router.ospf.router_id = str("10.10.0.%d" % x)
+            all_vrf = node.config.get_vrf_interfaces()
+            vrf = all_vrf.get('default', None)
+            if not vrf:
+                vrf = node.config.add_vrf(name='default')
+            vrf.router.ospf.enable = 'on'
+            vrf.router.ospf.redistribute.static.enable='on'
+            vrf.router.ospf.log.adjacency_changes="on"
+            ar = vrf.router.ospf.add_area('0.0.0.0')
+			area = isp1_default_vrf.router.ospf.add_area('0.0.0.0')
+            area.add_network("180.1.1.100/30")
+	node1.snippet_cmds.append("log file %s" % node1.ospfd_log)
+    node1.snippet_cmds.append("router ospf6\nospf6 router-id %s\nlog-adjacency-changes detail\n redistribute connected" % rid)
+	node1.snippet_cmds.append("router ospf6\n interface %s area %s \n "% (intf.name, area))
+    node1.config.system.snippet.frr_conf = str('\n'.join(node1.snippet_cmds))
+	node1.snippet_cmds.append("interface %s\nipv6 ospf6 network point-to-point\nipv6 address %s\n%s" %
+                            (intf.name, anchor_ip, intfcmd))
+                        node1.config.system.snippet.frr_conf = str('\n'.join(node1.snippet_cmds))
+					
+	node.device.sudo("vtysh -c 'conf t' -c 'ptm-enable' -c 'end'")
+	node.device.sudo("vtysh write")
+	
+=============
+static route
+===============
+top0_route_obj = top1_vrf.router.static.add_route(IPv4Network(u"%s"%top1_ip))
+via_obj = top0_route_obj.add_via("blackhole")	
+ v6_nh = v6_route.add_via(list(node4.config.get_swp_interfaces().values())[1])
+	
+ipdb> host11_vobj = host11.config.add_vrf("default")
+ipdb> host11_obj == host11_vobj.router.static.add_route(IPv4Network(u"0.0.0.0/0"))
+*** NameError: name 'host11_obj' is not defined
+ipdb> host11_obj = host11_vobj.router.static.add_route(IPv4Network(u"0.0.0.0/0"))
+ipdb> host11_obj.add_via(IPv4Address(u"172.16.10.1"))
+<cafe.cue_config.cue_rib.CueStaticRouteVia object at 0x7ff895ce00b8>
+
+	
+			55024
+			system 2 thinking psychology tamil
+			
+			node.device.sudo("echo '''graph G {\n \"n1\":swp1 -- \"n2\":swp1 [BFD=\"afi=both,upMinTx=330,requiredMinRx=340,detectMult=6\",LLD
+P=\"\"]\n}''' >> /tmp/topology.dot")
+
+=============
+Add loopback
+=============
+
+loop_iface = node.config.add_loopback_interface("lo")
+loop_iface.ip.address= [IPv4Interface(u"10.10.0.%d/32" % node.number)]
+
+================
+goldern config
+================
+node.initial_config = node.copy_nvue_config(cue_config_ext=node.config)
+ in test case
+ ------------
+node.config = node.copy_nvue_config(cue_config_ext=node.initial_config )
+in config-file write the below
+------------------------------
+        for node in self.nodes():
+            node.init_config = node.copy_nvue_config(cue_config_ext=node.config)
+ 
+ @classmethod
+    def post_suite_hook(cls):
+        log.info("*"*30 + 'Running post_suite_hook' + "*"*30)
+        if cls.sp.dut.hard_target:
+            cls.sp.dut.config = rut.copy_nvue_config(cue_config_ext=cls.sp.dut.golden_config)
+            cls.sp.dut.config.render_full_config()
+            cls.sp.dut.device.sudo("nv config apply startup -y")
+
+    @classmethod
+    def pre_suite_hook(cls):
+        log.info("pre_suite_hook: Make sure required packages are installed")
+        for node in cls.topo.nodes():
+            if not node.device.check_for_package_on_device('vrf'):
+                node.device.install_pkg('vrf')
+                node.device.service.restart('networking', mgmt_vrf=node.mgmt_vrf)
+
+        """
+        Following code is copy of FrrSuiteMixin pre_suite_hook -- Need to figure out reuse without duplicating - TBD
+        Create a copy of the frr config before any tests run.  We use this
+        to restore the frr config to the correct state between each test.
+        """
+
+        for node in cls.topo.nodes():
+            node.initial_config = node.copy_nvue_config(cue_config_ext=node.golden_config)		
+
+
+sudo systemctl restart sshd.service
+========
+sub interface
+======
+
+swp_subif_obj = host.config.add_sub_interface(swp_obj, vlan)
+
+=======
+cumulus pass
+=========
+
+cumulus/CumulusLinux!
+
+
+sudo systemctl restart sshd.service
+
+then try root/cn321
+
+ipythn
+
+
+import vxlan_https_api
+vxlan_https_api.release_dut('mlx-4600-04')
+ like 1
+
+    def pre_run_hook(self):
+        if self.dut.exists("/etc/nvue.d"):
+            self.nvue_enabled = True
+
+        log.info("Enable NVUE on the node if not enabled.")
+        self.dut.cue.start_nvued()
+		
+====================
+Bala 9600043227
+====================
+
+===========
+mlag
+===========
+def create_mlag(node, ifaces):
+            peer_mlag=node.config.add_mlag_peerlink(peerlink_slave_objs=ifaces)
+            return peer_mlag
+
+        def configure_mlag(node,backupip,mac_address,priority):
+            mlag = node.config.add_mlag()
+            mlag.mac_address = mac_address
+            mlag.peer_ip='linklocal'
+            mlag.add_backup(backupip)
+            mlag.priority=priority
+            mlag.init_delay = 10
+            return 
+			
+=========
+sub interface
+==============
+swp_subif_obj = host.config.add_sub_interface(iface, subnet)
+                swp_subif_obj.ip.address.append(IPv4Interface(u"%s.1.%s.2/24"% (host.network,subnet)))
+                swp_subif_obj.ip.address.append(IPv6Interface(u"2001:db8:%s:%s::2/64"% (host.network,subnet)))	
+
+=================
+snmp oid
+=================
+
+
+snmptranslate -Td -On <mib name>::<object>
+
+
+snmptranslate -Td -On CUMULUS-BGPVRF-MIB::bgpLocalAs
+
+========================
+prefix
+=====================
+ rou2 = r2.config.add_router()
+        pl = rou2.policy.add_prefix_list('list_stat_to_bgp')
+        pl_rule = pl.add_rule(5)
+        pl_rule.action = 'permit'
+        pl_m = pl_rule.add_match(IPv4Network(u"20.8.8.0/30"))
+        pl_m.max_prefix_len = 32
+        rm = rou2.policy.add_route_map('redist_stat_to_bgp')
+        rm_rule = rm.add_rule(10)
+        rm_rule.action.permit
+        rm_rule.match.type = 'ipv4'
+        rm_rule.match.ip_prefix_list = 'list_stat_to_bgp'				
+		
+============
+net add ip addres
+==============
+
+for j in range(1, 10):
+            nets = IPv4Network("30.%d.0.0/16" % j).subnets(8)
+            for i in range(networks):
+                net = next(nets)
+                bgp_nets.append(str(net))
+hosts = network.iterhosts()
+        #     addr = "%s/24" % (next(hosts))
+        #     iface.addrs.append(IPNetwork(addr))	
+
+        for node in backbone:
+            for iface in list(node.config.get_swp_interfaces().values()):
+                if not(iface.ip.address):
+                    p = next(backbone_net)
+                    host = p.hosts()
+                    addr = "%s/%s" % (next(host), p.prefixlen)
+                    iface.ip.address.append(IPv6Interface(addr))
+                    naddr = "%s/%s" % (next(host), p.prefixlen)
+                    iface.opposite.ip.address.append(IPv6Interface(naddr))		
+					
+============
+route-map
+============
+router = node.config.add_router()
+        route_map = router.policy.add_route_map('SET_COMMUNITY_729')
+        rule = route_map.add_rule(10)
+        rule.action.permit
+        rule.set.add_community("7:29")				
+			
+========
+ssim3 clone
+=========
+git clone ssh://git@gitlab-master.nvidia.com:12051/nbu-sws/CL/testing/ssim3.git
+
+git submodule update --init --recursive
+
+
+
+./create_venv.py <working_venv>
+
+
+
+source <working_venv>/bin/activate
+
+to stop
+----------
+ stop-sim -rfR //tmp/kkodandarama/TestClosPtmdBfdBgp-AQT0SV
+ 
+tumex
+---
+[08:29] Balakrishna Cherukuri
+start a new session: tmux
+tmux new -s <session name>
+connect to the existing session: tmux a -t 0
+ 
+list and connect to existing session:
+ 
+tmux ls
+tmux attach-session -t <session_number>
+
+check load
+--------
+venv) skadiri@hydra-user-04:~/nv2_backup/cl-tests$ hydra-load-calculator -s hydra-user-04
+skadiri@hydra-user-04's password:
+skadiri@hydra-user-04's password:
+-------------------------------------
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/passed-mlx-amd64/build/images/ ssim3/cl-tests/test_files/monitoring/snmp/snmp_entity_mib_tests.py:SnmpEntityMiBTests.test02_verify_CPU_utilization -d mlx-2100-08
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/build-5.dev.2464/vx-all-amd64/build/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_snmp_config_reapply.run_test
+
+git commit --no-verify -m "<message>"
+
+===============
+git ssim3
+===============
+
+git commit --no-verify -m "<message>"
+
+TO PULL the branch:
+git clone ssh://git@gitlab-master.nvidia.com:12051/nbu-sws/CL/testing/ssim3.gitTO SETUP the new repo:
+git submodule update --init --recursive (requires NVIDIA creds)TO CREATE VENVPLEASE CREATE ON HYDRA YOU ARE USINGCurrently hydra-user-01 and hydra-auto-09 are usable to create venv without any errors(from base repo folder) ./create_venv.py <venv_name>KEY DIFFERENCESAll repos are now under a single GIT (cafe/tools/tests)<repo>/cl-tests/cl_tests has become <repo>/cl-tests/test_filesCertain tools and cafe libraries have had their imports updated
+cl-sim.ssim2 -> cl-sim.ssim3cl-tests.cl_tests -> cl-tests.test_files
+
+ nv set vrf default router bgp peer-group LEAF_SPINE address-family ipv4-unicast enable off
+ 
+ 
+interface swp6.19
+  ipv6 ospf6 area 0.0.0.0
+  ipv6 ospf6 network point-to-point
+  address 2001:db8:7:19::1/64

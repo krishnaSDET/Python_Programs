@@ -1,0 +1,1054 @@
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/build-5.1.0.1006/vx-all-amd64/build/images/ nv/cl-tests/tests/l2/multicast/igmp_tests.py:TestIgmpV3OptimizedForwardingConfig.test05_igmp_optimized_flooding_receiver_first
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_l2_config_nclu_reapply.run_test
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_ntp_nclu.run_test -T /work/hydra-user-03/kkodandarama/ssim3/ui/nclu_misc_Test_ntp_nclu   
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3-nv/cl-tests/test_files/ui/nclu/qa_cfd_test.py:qa_cfd_tests.test_qa_150 -d mlx-2410-05
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestBgpBfd.run_test -d mlx-4600-04 -d mlx-2410-05
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestBgpBfd.run_test -d mlx-4600-04
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_nclu_show_packages_version.run_test -T /work/hydra-user-04/kkodandarama/ssim3/ui/nclu_misc_Test_nclu_show_packages_version
+
+Test_add_bond_8023ad_mode
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_add_bond_8023ad_mode.run_test  -T /work/hydra-user-04/kkodandarama/ssim3/ui/nclu_misc_Test_add_bond_8023ad_mode
+
+
+Test_Nclu_Bridge_Idempotency
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_Nclu_Bridge_Idempotency.test01_CM_22697 -T /work/hydra-user-04/kkodandarama/ssim3/ui/nclu_misc_Test_Nclu_Bridge_Idempotency
+
+tests.ui.nclu.nclu_misc_tests.Test_nclu_show_packages_version.run_test to NVUE
+
+tests.l3.bfd.ptmd_test.TestBgpBfd.run_test to NVUE
+
+TestPtmctlApi
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestPtmctlApi.run_test 
+
+TestBfdV4V6
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestBfdV4V6.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestPtmctlApi.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestBfdV4V6.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestBfdV4V6
+
+
+tests.l3.bfd.ptmd_test.TestMultipathBgpBfd.run_test to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestMultipathBgpBfd.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestMultipathBgpBfd
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestMultipathBgpBfd.run_test 
+
+tests.l3.bfd.ptmd_test.TestPtmdBasic.run_test to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestPtmdBasic.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestPtmdBasic
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestPtmdBasic.run_test
+
+tests.l3.bfd.ptmd_test.TestClosPtmdBfdOspf.run_test 
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestClosPtmdBfdOspf.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestClosPtmdBfdOspf1
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestClosPtmdBfdOspf.run_test
+
+TestBgpBfdMhopNclu
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestBgpBfdMhopNclu.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestBgpBfdMhopNclu
+
+ptmd_test.TestBfdOspfV6Quagga.run_test to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestBfdOspfV6Quagga.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestBfdOspfV6Quagga
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/bfd/ptmd_test.py:TestBfdOspfV6Quagga.run_test -T /work/hydra-user-04/kkodandarama/ssim3/bfd/ptmd_test_TestBfdOspfV6Quagga
+
+
+TestNcluBgpReapply
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:TestNcluBgpReapply.run_test
+
+config file running
+----------------------
+ipv6 ospf6 bfd 4 350 350
+
+./nv/cl-tests/tests/cue_configs/AbrConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/build-5.1.0.1006/vx-all-amd64/build/images/ --vx-img --stop
+
+./nv/cl-tests/tests/cue_configs/DhcpMultL23Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/build-5.1.0.1006/vx-all-amd64/build/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/SingleBridgeConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+/labhome/kkodandarama/ssim3/cl-tests/test_files/configs/BgpTwoByTwoFullMeshConfig.py
+
+./ssim3/cl-tests/test_files/cue_configs/BgpTwoByTwoFullMeshConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/BfdConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/BfdConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./nv/cl-tests/tests/configs/BgpMultipathConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/BgpMultipathConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/EcmpConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/EcmpConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./nv/cl-tests/tests/configs/ClosOspfConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/ClosOspfConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./nv/cl-tests/tests/configs/BgpGenericConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/BgpGenericConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/SingleBridgeConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/SingleBridgeConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/OspfRangeConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+
+./nv/cl-tests/tests/cue_configs/CueDhcpCM11920Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./nv/cl-tests/tests/cue_configs/NvidiaGeForceConfigNew.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/bfd/ptmd_test.py:TestPtmdBasic.run_test
+
+
+/labhome/kkodandarama/nv/cl-tests/tests/l3/general/zebra_test.py
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/build-5.1.0.1006/vx-all-amd64/build/images/ nv/cl-tests/tests/l3/general/zebra_test.py:TestStaticRouteNht.run_test
+
+
+./ssim3/cl-tests/test_files/configs/EcmpConfig.py --vm-base-dir /labhome/kkodandarama/python3-nvue_99.99.99-cl99.99.99u99_all.deb --vx-img --start
+
+
+./ssim3/cl-tests/test_files/configs/EcmpConfig.py --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb --deb-img --start
+
+./nv/cl-tests/tests/configs/NatConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./nv/cl-tests/tests/configs/EcmpConfig.py --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb --deb-img --start
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l1andswp/qos/qos_shaper_tests.py:QosTrafficShaperTests.test01_verify_user_able_to_configure_unconfigure_shaping_without_any_error -d mlx-2100-08
+
+
+test02_verify_user_able_to_assign_meaningful_name_to_Shaper_Port_Group
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l1andswp/qos/qos_shaper_tests.py:QosTrafficShaperTests.test02_verify_user_able_to_assign_meaningful_name_to_Shaper_Port_Group -d mlx-2100-08
+
+test04_verify_user_able_to_add_delete_Shaper_Port_Group
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l1andswp/qos/qos_shaper_tests.py:QosTrafficShaperTests.test04_verify_user_able_to_add_delete_Shaper_Port_Group -d mlx-2010-03
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/nclu_misc_tests.py:Test_ptp_config_nclu_reapply.run_test
+
+	
+Test: Convert tests.ui.nclu.nclu_misc_tests.Test_ptp_config_nclu_reapply.run_test to NVUE
+tests.ui.nclu.misc_tests_CM_17065.NcluMiscTest.test_CM25801 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/misc_tests_CM_17065.py:NcluMiscTest.test_CM25801
+
+	 out_str
+'Nov 18 03:19:11 r1 nvued[3469]:    INFO:  Apply Issues: (Warning: current hostname `r1` will be replaced with `leaf05`),(/etc/hosts)'
+ipdb> n
+
+
+nclu_misc_tests.Test_snmp_config_reapply.run_test
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/nclu_misc_tests.py:Test_clag_reapply_config_nclu.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/build-5.dev.2464/vx-all-amd64/build/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_snmp_config_reapply.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/general/zebra_test.py:TestStaticRouteNht.run_test
+
+
+CueBgpTwoAsConfig
+NcluClagEx1Config
+./nv/cl-tests/tests/configs/NcluClagEx1Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+
+./ssim3/cl-tests/test_files/configs/NcluClagEx1Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./ssim3/cl-tests/test_files/configs/NatConfig.py --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb --vm-img --start
+
+./nv/cl-tests/tests/configs/NatConfig.py --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb --vx-img --start
+
+
+runtests.sh -l DEBUG tests/infra/testsostypes.py:TestOtherOsTypes --vm-locker ~/arista-vm/vm_locker/ --repo /home/kyin/repo
+
+t tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode 
+
+runtests.sh -l DEBUG nv/cl-tests/tests/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_clag_reapply_config_nclu.run_test -T /work/hydra-user-03/kkodandarama/ssim3/ui/Test_clag_reapply_config_nclu
+
+
+Test_ptp_config_nclu_reapply
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_ptp_config_nclu_reapply.run_test -T /work/hydra-user-03/kkodandarama/ssim3/ui/Test_ptp_config_nclu_reapply
+
+tests.ui.nclu.qa_cfd_test.qa_cfd_tests.test_qa_151
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/qa_cfd_test.py:qa_cfd_tests.test_qa_151 -d mlx-2100-06 -T /work/hydra-user-05/kkodandarama/ui/test_qa_151
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/qa_cfd_test.py:qa_cfd_tests.test_qa_151 -d mlx-2100-06
+
+/labhome/kkodandarama/nv/cl-tests/tests/ui/nclu/rest_nclu_test.py
+
+
+
+.rest_nclu_test.RestNcluTest.test1a_base_config 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/rest_nclu_test.py:RestNcluTest.test2d_inband_group_access
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test2d_inband_group_access
+
+RestConfig
+
+./ssim3/cl-tests/test_files/cue_configs/RestConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/rest_nclu_test.py:RestNcluTest.test1a_base_config
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test2g_expired_certificate
+
+./nv/cl-tests/tests/configs/NatConfig.py --repo /labhome/kkodandarama/debs/python3-nvue_99.99.99-cl99.99.99u99_all.deb --vx-img --start
+
+
+./nv/cl-tests/tests/cue_configs/CueIpv6NdConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/NatConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/cue/cue_rest_tests.py:RestNcluTest.test02_cue_restapi_bgp_conf
+
+/labhome/msubburaj/env37/ssim3/cl-tests/test_files/l1andswp/dhcp/testdhcp.py
+
+./ssim3-general/ssim3/cl-tests/test_files/configs/NatConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test1a_base_config -T /work/hydra-user-05/kkodandarama/ui/test1a_base_config
+
+py23_dhcp
+test1b_l3_commands
+test2k_vlans_bridge
+test2j_show_cmd_verify
+test2k_vlans_bridge
+test1f_ifname_types
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/rest_nclu_test.py:RestNcluTest.test1f_ifname_types
+
+
+test2d_inband_group_access
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test1d_debug_commands
+
+test1c_show_commands
+test2j_show_cmd_verify
+test2k_vlans_bridge
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test2j_show_cmd_verify
+
+test2k_vlans_bridge
+test2k_vlans_bridge
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test2k_vlans_bridge
+
+test2d_inband_group_access
+nd_home_agent_lifetime_test11
+nd_router_preference_test8
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/general/Ipv6_ND_test.py:Ipv6_ND_test.nd_home_agent_lifetime_test11 -t nightly_nvue
+'net show configuration dot1x'
+/labhome/kkodandarama/nvue/cl-tests/tests/l3/general/Ipv6_ND_test.py
+user_ro:test1
+
+ - set:
+    bridge:
+      domain:
+        br_default:
+          vlan:
+            '20':
+              vni:
+                '20': {}
+    nve:
+      vxlan:
+        enable: on
+        source:
+          address: 13.13.1.1
+/nve/vxlan/source    {address: 13.13.1.1}
+/bridge/domain/br_default/vlan/20          {vni: {"20":{}}}
+/vrf/default/loopback/ip   {address "{"1.1.1.1/24":{}}}
+
+Nc-1024,1026,1023
+
+nv set vrf default router pim address-family ipv4-unicast rp 10.10.10.101
+/vrf/{vrf-id}/router/pim
+  {'nve/vxlan'  : '{"enable": "on"}'  },
+ {'nve/vxlan/source'  :   '{"address" : {"13.13.1.1"} }'},
+ {'bridge/domain/br_default/vlan/20'  : '{"vni": {"20":{}} }'}
+                  
+/labhome/kkodandarama/ssim3/cl-tests/test_files/l3/nat/nat_test.py
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test05_static_nat_phy_if_acl_match_5_tuple	-d mlx-
+				  
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/  cl-tests/tests/l2/multicast/mc_snoop_newbrdrv_test.py:TestMcSnoop_nclu.run_test  -d mlx-2100-01 -t sunita  -T logsym_multicaste.txt -r summary_multicaste.txt
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l2/multicast/mc_snoop_newbrdrv_test.py:TestMcSnoop_clag_cli.run_test				  
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/  cl-tests/tests/l2/multicast/mc_snoop_newbrdrv_test.py:TestMcSnoop_clag_cli.run_test  -d mlx-2100-01 -t sunita  -T logsym_multicaste.txt -r summary_multicaste.txt
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test2k_vlans_bridge -T /work/hydra-user-03/kkodandarama/ssim3/ui/test2k_vlans_bridge
+
+
+nv set vrf <vrf-id> loopback ip address <ip-prefix-id>
+nv set vrf default router static 10.10.10.101/32
+
+nv set vrf default router static 131.1.1.0/24 via blackhole
+
+ static:
+            131.1.1.0/24:
+              address-family: ipv4-unicast
+              via:
+                blackhole:
+                  type: blackhole
+
+/vrf/{vrf-id}/router/static/{route-id}/via  blackhole:{type: blackhole}
+
+test2j_show_cmd_verify
+nv set vrf default router ospf area 0.0.0.0 network 10.1.1.0/24
+
+
+nv set interface swp1 bridge domain br_default
+nv set interface swp2 bridge domain br_default
+nv set bridge domain br_default vlan 100,101
+nv set interface swp1 bridge domain br_default vlan 100
+nv set interface swp2 bridge domain br_default vlan 101
+nv set interface swp1 bridge domain br_default access 100
+nv set interface swp2 bridge domain br_default access 101
+nv set interface vlan100 ip address 44.1.1.1/24
+nv set interface vlan101 ip address 44.1.2.1/24
+ interface:
+     
+      swp1:
+        bridge:
+          domain:
+            br_default:
+              access: 100
+      
+      swp2:
+        bridge:
+          domain:
+            br_default:
+              access: 101
+      vlan100:
+        ip:
+          address:
+            44.1.1.1/24: {}
+        vlan: 100
+      vlan100-101:
+        type: svi
+      vlan101:
+        ip:
+          address:
+            44.1.2.1/24: {}
+        vlan: 101
+
+/interface/{interface-id}/ip/address
+/interface/swp1/bridge/domain/{domain-id}
+/interface/swp2/bridge/domain/{domain-id}
+nv show interface <interface-id>
+nv show interface <interface-id> bridge domain <domain-id>
+
+
+
+./nv/cl-tests/tests/configs/Evpn_Route_Types_Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+/lab2300-home/kkodandarama/nv/cl-tests/tests/configs/Evpn_Route_Types_Config.py
+
+
+SSIMPC-1145	2307040	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test1_Reload_Quagga to NVUE	smoke_nvue
+SSIMPC-1144	2307039	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test2_static_routes to NVUE	smoke_nvue
+SSIMPC-1143	2307038	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test3_redistribute_static_routes to NVUE	smoke_nvue
+SSIMPC-1142	2307037	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test4_add_remove_neighbor to NVUE	smoke_nvue
+SSIMPC-1141	2307036	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test5_route_maps to NVUE	smoke_nvue
+SSIMPC-1140	2307035	To Do	Test: Convert tests.l3.general.quagga_reload_test.QuaggaReloadTest.test6_bgp_vrf to NVUE	smoke_nvue
+SSIMPC-419	2306087	To Do	Test: Convert tests.l3.general.bridge_routing_test.Test_subif_bgp_routing_nclu.run_test to NVUE	nclu-smoke_nvue
+SSIMPC-383	2306051	To Do	Test: Convert tests.l3.general.bridge_routing_test.Test_vrf_bgp_routing_nclu.run_test to NVUE	nclu-smoke_nvue
+
+SSIMPC-1052	2306945	To Do	Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistributionMultiTablesOspf.run_test to NVUE	smoke_nvue
+SSIMPC-1022	2306915	To Do	Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistDynamicNeighborsBgp.run_test to NVUE	smoke_nvue
+SSIMPC-981	2306762	To Do	Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistStaticNeighborsBgp.run_test to NVUE	smoke_nvue
+ 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/nclu/Interfacestatustest.py:InterfaceStatusTest.validate_IF_state_test -T /work/hydra-user-03/kkodandarama/ssim3/ui/validate_IF_state_test
+
+
+/labhome/kkodandarama/nv/cl-tests/tests/ui/nclu/Interfacestatustest.py
+
+/labhome/kkodandarama/nv/cl-tests/tests/l3/nat/nat_test.py
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode -d mlx-2100-08
+				  
+TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3-nv/cl-tests/test_files/ui/nclu/nclu_misc_tests.py:Test_clag_reapply_config_nclu.run_test 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/ui/cue/rest_nclu_test.py:RestNcluTest.test1b_l3_commands
+
+test24_static_nat_phy_if_acl_match_sip_with_non_atomic_mode
+TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test24_static_nat_phy_if_acl_match_sip_with_non_atomic_mode -d mlx-4600-04
+
+test23_static_nat_with_ucmp_triggers
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test23_static_nat_with_ucmp_triggers -d mlx-2700-15
+
+test17_static_pat_scale_with_networking_service_restart
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3/cl-tests/test_files/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test17_static_pat_scale_with_networking_service_restart -d mlx-4600-04
+
+
+apt-get install -y iperf3
+
+ 512: {'sip': '172.16.10.2', 'dip': '140.1.1.2', 'proto': 'tcp', 'sport': 6612, 'dport': 7612, 'chain': 'POSTROUTING', 'action': 'snat', 'nat_xlated_ip': '130.1.200.1', 'xlated_port': 11512}}
+ 
+nv_add_acl_rule (node, table, aclname, priority, action, prot="", src={}, sport="", dst={}, dport="",policer_values={},tcp_flags=[], dscp=""):
+
+nv_add_acl_rule (node, "ipv4", "FOO", 1, "accept", prot="tcp", src={"source-ip":"10.10.10.1/32"}, sport="ftp", dst={"dest-ip":"ANY"}, dport="ANY",policer_values={},tcp_flags=[], dscp="")
+
+ -t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6101 --dport 7101 -j SNAT --to-source 130.1.200.1:11001
+ 
+ -t nat -A POSTROUTING -s 10.0.0.1 -p tcp -j SNAT --to-source 172.30.58.80
+
+-t nat -A PREROUTING -d 172.30.58.80 -p udp --dport 6000 --in-interface swp51  -j DNAT --to-destination 10.0.0.1:5000
+
+test_files.l2.multicast.mc_snoop_newbrdrv_test.TestMcSnoop_nclu TestMcSnoop_nclu.run_test
+
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6101 --dport 7101 -j SNAT --to-source 130.1.200.1:11001
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6102 --dport 7102 -j SNAT --to-source 130.1.200.1:11002
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6103 --dport 7103 -j SNAT --to-source 130.1.200.1:11003
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6104 --dport 7104 -j SNAT --to-source 130.1.200.1:11004
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6105 --dport 7105 -j SNAT --to-source 130.1.200.1:11005
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6106 --dport 7106 -j SNAT --to-source 130.1.200.1:11006
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6107 --dport 7107 -j SNAT --to-source 130.1.200.1:11007
+-t nat -A POSTROUTING -s 172.16.10.2 -d 140.1.1.2 -p tcp --sport 6108 --dport 7108 -j SNAT --to-source 130.1.200.1:11008
+
+
+ -t nat -A PREROUTING -s 140.1.1.2 -d 130.1.200.1 -p tcp --sport 7398 --dport 11298 -j DNAT --to-destination 172.16.10.2:6398
+
+simpledeploy -d mlx-4600-04 -i /mnt/cl-builds/CumulusLinux-5_dev/passed-mlx-amd64/build/images/cumulus-linux-mlx-amd64.bin
+
+
+simpledeploy -d mlx-2100-06 -i /mnt/cl-builds/CumulusLinux-5_dev/passed-mlx-amd64/build/images/cumulus-linux-mlx-amd64.bin
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/passed--amd64/build/images/ 
+passed-vx-qa-amd64/images/
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.5.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4a_mpls_segment_unnumbered_config -T mpls.txt -r summary.txt -d mlx-4600a1-05
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/build-5.4.0.1002/vx-all-amd64/build/images/ ssim3/cl-tests/test_files/ui/nclu/nclu_snmp_tests.py:SnmpBasicNcluTests.test_00_verify_minimum_config  -t nclu-smoke
+
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/NatConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/build-5.4.0.1002/vx-all-amd64/build/images/  --vx-img --start
+
+
+untests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/nat/nat_test.py:TestStaticNatAndPatPhyIfConfig.test25_static_pat_scale_with_non_atomic_mode
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l1andswp/dhcp/testdhcp.py:Testdhcp_L2_macless.run_test
+
+/labhome/kkodandarama/nv/cl-tests/tests/l1andswp/dhcp/testdhcp.py
+
+
+./ssim3-nat/ssim3/cl-tests/test_files/configs/TestMiOspfConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.1.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3-nat/ssim3/cl-tests/test_files/configs/MrtOspfBrBfdConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistDynamicNeighborsBgp.run_test to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3-nat/ssim3/cl-tests/test_files/l3/general/redist_table_neighbor_test.py:TestRedistDynamicNeighborsBgp.run_test  -t nclu-smoke
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/general/redist_table_neighbor_test.py:TestRedistDynamicNeighborsBgp.run_test -d mlx-2100-08
+
+
+/labhome/kkodandarama/ssim3-nat/ssim3/cl-tests/test_files/l3/general/zebra_test.py
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/general/zebra_test.py:TestStaticRouteTags.run_test -d mlx-2740-04
+
+rm -rf $HOME/.vscode-server
+
+QuaggaReloadConfig
+MiOspfConfig
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/NatConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+./nv/cl-tests/tests/configs/MiOspfConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+ Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfConfig.test_configuration_adjacency 
+ 
+ runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_configuration_adjacency -d mlx-2740-04
+
+
+
+n4_ifaces[0].ip.address
+
+./nv/cl-tests/tests/configs/MplsConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --
+
+./nv/cl-tests/tests/configs/DhcpCM11920Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3/cl-tests/test_files/configs/CueDhcpCM11920Config.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l1andswp/dhcp/testdhcp.py:Testdhcp_cm15496.run_test -d mlx-2100-08
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l1andswp/dhcp/testdhcp.py:Testdhcp_cm15496.run_test -d mlx-2100-08
+
+server.device.sudo('''sed -i 's/host host1 {host host1 {\\n        host-identifier option agent.circuit-id \"%s\";/' /etc/dhcp/dhcpd.conf'''%(relay.swp4.name),warn_only=True)
+server.device.sudo('''sed -i 's/host host3 {/host host3 {        host-identifier option agent.circuit-id \\"%s\\";/g' /etc/dhcp/dhc
+pd.conf'''%relay.swp5.name,warn_only=True)
+
+
+server.device.sudo('''sed -i 's/host host3 {/host host3 {        host-identifier option agent.circuit-id \\"%s\\";/g' /etc/dhcp/dhcpd.conf'''%relay.swp6.name,warn_only=True)
+
+
+ sudo sed -i 's/host host1 {/host host1 {\\n        host-identifier option agent.circuit-id swp4/' /etc/dhcp/dhcpd.conf
+
+
+Test: Convert tests.sysconfig.aaa.radius_tests.TestRadiusClient.test_13_radius_priv_mapped_priv_user to NVUE
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/sysconfig/aaa/radius_tests.py:TestRadiusClient.TestRadiusClient.test_01_user_auth_ssh -d mlx-4600a1-05 -T notsupported/test_01_user_auth_ssh.txt
+
+mlx-2410-05
+
+mlx-2410-05
+mlx-4600a1-05
+mlx-2010a1-12
+
+./ssim3/cl-tests/test_files/configs/MplsConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --stop
+
+l3.tunneling.mpls.nclu_mpls_test.NcluMplsLsrTest.test4a_mpls_segment_unnumbered_config to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4d_mpls_segment_unnumbered_v4_ecmp -d mlx-2010a1-12
+
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4c_mpls_segment_unnumbered_ipv6 -d mlx-4600a1-05 -t mpls.txt
+
+
+test4c_mpls_segment_unnumbered_ipv6
+NcluMplsLerTest.test3c_mpls_segment_v6_numbered_ipv6_ping
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4a_mpls_segment_unnumbered_config
+tests.l3.tunneling.mpls.nclu_mpls_test.NcluMplsLerTest.test1b_mpls_segment_numbered_ipv4
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLerTest.test3d_mpls_segment_unnumbered_v4_ecmp  
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/sysconfig/aaa/radius_tests.py:TestRadiusClient.test_12_radius_priv_lvl_change  -d mlx-2410-05 -T radius.txt
+
+Convert tests.sysconfig.aaa.radius_tests.TestRadiusClient.test_12_radius_priv_lvl_change
+ip route 55.1.10.2/32 10.1.1.2 label 452
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLerTest.test3d_mpls_segment_unnumbered_v4_ecmp -d mlx-2410-05 -T mpls.txt
+
+Test Case: test_files.ui.nclu.Interfacestatustest.InterfaceStatus
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/ui/nclu/Interfacestatustest.py:InterfaceStatusTest.validate_IF_state_test -d mlx-2410-05
+
+test_00_verify_minimum_config
+test_files.ui.nclu.nclu_snmp_tests.SnmpBasicNcluTests.test_00_verify_minimum_config
+Tags: nclu-smoke nclu-min snmp
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/ui/nclu/nclu_snmp_tests.py:SnmpBasicNcluTests.test_00_verify_minimum_config -d mlx-2410-05 -d mlx-2010a1-12 -T snmp.txt
+
+ Convert tests.l3.tunneling.mpls.nclu_mpls_test.NcluMplsLerTest.test2g_mpls_segment_unnumbered_frr_restart to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4d_mpls_segment_unnumbered_v4_ecmp 
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4d_mpls_segment_unnumbered_v4_ecmp  
+
+
+
+test3b_mpls_segment_v6_numbered_ipv4_ping
+[16:06] Sunita Kadiri
+cls.sp.pri_bonds = [k.name for k in list(cls.sp.cnodes[0].config.get_bond_interfaces().values())]
+
+     
+cls.sp.sec_bonds = [list(cls.sp.cnodes[1].config.get_bond_interfaces().values())[k].name for k in range(0, 4)]
+
+
+Convert tests.l3.ospf.ospfv3.abr_ospfv3_tests.TestOspfv3RangeConfig.test_ospfv3_restore_non_default_cost_blackhole to NVUE
+ Convert tests.l3.ospf.ospfv2.bridge_ospf_test.TestVaBridgeLlmcfldL3.run_test
+.ospfv3_tests.TestAbrConfig.test_ospfv3_non_backbone_summary 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/abr_ospfv3_tests.py:TestOspfv3Config.test_ospfv3_lsa_removal  -T notsupported/test_ospfv3_lsa_removal.txt -d mlx-2010a1-12
+
+TestOspfv3RangeConfig.test_ospfv3_remove_route_with_range_check
+ Convert tests.l3.ospf.ospfv3.abr_ospfv3_tests.TestOspfv3Config.test_ospv3_remove_route_check
+
+
+NcluMplsLerTest.test3c_mpls_segment_v6_numbered_ipv6_ping
+Convert tests.l3.tunneling.mpls.nclu_mpls_test.NcluMplsLerTest.test1b_mpls_segment_numbered_ipv4 to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py:NcluMplsLsrTest.test4c_mpls_segment_unnumbered_ipv6  -T notsupported/test4b_mpls_segment_unnumbered_ipv4.txt -d mlx-2010a1-12
+
+ Convert tests.l3.tunneling.mpls.nclu_mpls_test.NcluMplsLsrTest.test4a_mpls_segment_unnumbered_config to NVUE
+Test: Convert tests.ui.nclu.nclu_ospf_test.NcluOspfTest.test7_completeospfv3 
+
+test1_basicospfv3_unnumbered
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/ui/nclu/nclu_ospf_test.py:NcluOspfTest.test1_basicospfv3_unnumbered
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.2.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/ui/nclu/nclu_ospf_test.py:NcluOspfTest.test1_basicospfv3
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l1andswp/dhcp/testdhcp.py:Testdhcp_cm15496.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/abr_ospfv3_tests.py:TestOspfv3Config.test_ospfv3_lsa_removal
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/passed-vx-qa-amd64/images/ ssim3-general/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_configuration_adjacency -d mlx-2740-04 -T ospf.txt
+
+
+router bgp 62
+  bgp router-id 2.2.2.2
+  neighbor 2001:db8:0:60::5 remote-as 65
+  
+bgp_conf = node.config.add_router()
+bgp_conf.bgp.enable = 'on'
+bgp_conf.bgp.autonomous_system = asn
+bgp_conf.bgp.router_id = IPv4Address(u"2.2.2.2")
+bgp_vrf_conf = node.config.add_vrf('default')
+bgp = bgp_vrf_conf.router.bgp
+bgp.enable = 'on'
+ neigh_conf = bgp.add_neighbor(neighbor_id="%s" % str("2001:db8:0:60::5"))
+            neigh_conf.enable = 'on'
+            neigh_conf.remote_as = 65
+
+
+intf_obj.link.state = 'down'
+#node.device.sudo("ifdown %s" % list(node.config.get_swp_interfaces().values())[0].name )
+
+
+Highly proficient in Python programming language, with expertise in developing and maintaining automation scripts for testing various software applications.
+Skilled in API testing, with extensive experience in REST and SOAP protocols, and proficiency in designing and executing API test suites using tools such as Postman and Swagger.
+In-depth knowledge of Layer 2 and Layer 3 networking protocols, including Ethernet, TCP/IP, OSPF, and BGP, with hands-on experience in testing and troubleshooting network devices and protocols.
+Experienced in containerization using Docker, with proficiency in building, deploying, and managing containerized applications and services.
+Proficient in Jenkins, with expertise in setting up and managing continuous integration and delivery pipelines for software development and testing.
+Skilled in Postman, with experience in designing and executing API tests and workflows using Postman Collections, Newman, and other related tools.
+Familiar with Git version control system, with experience in managing and collaborating on software development projects using Git repositories and related tools such as GitHub and Bitbucket.
+Experienced in JIRA issue tracking software, with proficiency in managing and tracking software bugs and issues in a collaborative environment.
+Proficient in PyATS framework, with expertise in developing and executing automated test cases for network devices and protocols using the framework's library of pre-built test cases and utilities.
+Skilled in SQL, with experience in querying databases and performing data analysis to extract insights and identify trends.
+Experienced in using Ixia test equipment, with proficiency in designing and executing network performance tests and evaluating network traffic patterns.
+Proficient in iPerf, with expertise in measuring network throughput and latency using the open-source tool.
+Familiar with Internet of Things (IoT) technologies, with experience in developing and testing IoT devices and protocols such as MQTT and CoAP.
+Adept in analyzing test results and identifying defects to improve the quality of the software.
+Strong communication and collaboration skills, with a proven track record of working effectively in a team environment.
+
+
+'vlan10: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9216\n        inet 50.1.10.1  netmask 255.255.255.0  broadcast 0.0.0.0\n        inet6 fe80::202:ff:fe00:7  prefixlen 64  scopeid 0x20<link>\n        inet6 2001:db8:50:10::1  prefixlen 64  scopeid 0x0<global>\n        ether 00:02:00:00:00:07  txqueuelen 1000  (Ethernet)\n        RX packets 10  bytes 928 (928.0 B)\n        RX errors 0  dropped 0  overruns 0  frame 0\n        TX packets 13  bytes 1358 (1.3 KiB)\n        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0'
+ipdb>
+
+'vlan10: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 9216\n        inet 50.1.10.1  netmask 255.255.255.0  broadcast 0.0.0.0\n        inet6 fe80::201:ff:fe00:505  prefixlen 64  scopeid 0x20<link>\n        inet6 2001:db8:50:10::1  prefixlen 64  scopeid 0x0<global>\n        ether 00:01:00:00:05:05  txqueuelen 1000  (Ethernet)\n        RX packets 10  bytes 928 (928.0 B)\n        RX errors 0  dropped 0  overruns 0  frame 0\n        TX packets 11  bytes 1138 (1.1 KiB)\n        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0'
+ipdb> n
+
+
+
+
+
+2023-03-16 06:52:05,094[hydra-user-01]:   INFO:          nclu_mpls_test: Ipv4 ECMP test Failed
+2023-03-16 06:52:05,094[hydra-user-01]:  ERROR:     test_files.lib.base: Failed: ECMP.  Pactets were not distributed across all DUTS.
+Traceback (most recent call last):
+  File "/labhome/kkodandarama/ssim3-snmp/ssim3/cl-tests/test_files/lib/base.py", line 1445, in wrapper
+    test(self)
+  File "/labhome/kkodandarama/ssim3-snmp/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py", line 2953, in test4d_mpls_segment_unnumbered_v4_ecmp
+    assert False, 'Failed: ECMP.  Pactets were not distributed across all DUTS.'
+AssertionError: Failed: ECMP.  Pactets were not distributed across all DUTS.
+2023-03-16 06:52:07,624[hydra-user-01]:  ERROR:     test_files.lib.base: Failed: ECMP.  Pactets were not distributed across all DUTS.
+NoneType: None
+2023-03-16 06:52:07,624[hydra-user-01]:   INFO:     test_files.lib.base: Caught Te
+
+
+def start_tcpdump(node, proto, iface="swp1"):
+    lsr3.device.sudo_bg('tcpdump -veni %s mpls > /tmp/port3.txt'.format(lsr3.swp2.name))
+    node.device.sudo('rm -f /tmp/output_{0}'.format(iface), warn_only=True)
+    time.sleep(1)
+
+
+def stop_tcpdump(node):
+    node.device.sudo("killall tcpdump", warn_only=True)
+    log.info("killing tcpdump on {0}".format(node.name))
+    return
+	
+result = lsr3.device.sudo_bg('timeout %s tcpdump -veni %s mpls > /tmp/port2.txt' % (timeout, lsr3.swp2.name))
+        result = lsr3.device.sudo_bg('timeout %s tcpdump -veni %s mpls > /tmp/port3.txt' % (timeout, lsr3.swp3.name))
+        result = lsr3.device.sudo_bg('timeout %s tcpdump -veni %s mpls > /tmp/port4.txt' % (timeout, lsr3.swp4.name))
+		
+
+ node.snippet_cmds = list()
+                node.snippet_cmds.append("router ospf6 \n ospf6 router-id %s " % IPv4Address(node.number))
+
+
+                ifaces = list(node.config.get_swp_interfaces().values())
+
+                if node.name == "rut":
+                    
+                    node.snippet_cmds.append("interface %s area 0.0.0.0" % ifaces[0].name)
+                    node.snippet_cmds.append("interface %s area 0.0.0.1" % ifaces[1].name)
+                    node.snippet_cmds.append("interface %s area 0.0.0.1" % ifaces[2].name)
+                    node.snippet_cmds.append("interface %s area 0.0.0.1" % bridge.name)
+  node.config.system.snippet.frr_conf = str('\n'.join(node.snippet_cmds))					
+  
+  
+
+./nv/cl-tests/tests/configs/EcmpOspfv3Config3.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+tests.l3.ospf.ospfv2.bridge_ospf_test.TestBridgeLlmcfldOspfbfdBcastnet.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/bridge_ospf_test.py:TestBridgeLlmcfldOspfbfdBcastnet.run_test -T TestBridgeLlmcfldOspfbfdBcastnet.txt
+
+tests.l3.ospf.ospfv2.bridge_ospf_test.TestBridgeLlmcfldL3.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/bridge_ospf_test.py:TestBridgeLlmcfldL3.run_test
+
+Convert tests.l3.general.redist_table_neighbor_test.TestRedistributionTableNeighbor.run_test to NVUE
+
+EcmpOspfv3Config3
+
+
+./nv/cl-tests/tests/configs/EcmpOspfv3Config3.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/Ospf6RouteRefreshConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+tests.l3.ospf.ospfv3.Ospfv3_Enhanced_test.EcmpOspfv3LsaTest.test4b_ecmp_Lsa_ospfv3
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/Ospfv3_Enhanced_test.py:EcmpOspfv3LsaTest.test4b_ecmp_Lsa_ospfv3 -T TestBridgeLlmcfldOspfbfdBcastnet.txt
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv3/Ospfv3_Enhanced_test.py:EcmpOspfv3LsaTest.test4b_ecmp_Lsa_ospfv3
+
+t tests.l3.ospf.ospfv3.test_ospf6_route_thrash.TestMain.run_test 
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/test_ospf6_route_thrash.py:TestMain.run_test -T TestBridgeLlmcfldOspfbfdBcastnet.txt
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv3/test_ospf6_route_thrash.py:TestMain.run_test
+
+OspfRoutePrefConfig
+
+
+MiOspfUnnumberedConfig
+./nv/cl-tests/tests/configs/MiOspfUnnumberedConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/MiOspfUnnumberedConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./nv/cl-tests/tests/configs/EcmpOspfv3Config3.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/OspfRoutePrefConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.3.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+Convert tests.l3.ospf.ospfv3.ospfv3_tests.TestOspfv3OspfRoutePref.run_test
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/ospfv3_tests.py:TestOspfv3OspfRoutePref.run_test -T TestBridgeLlmcfldOspfbfdBcastnet.txt
+ 
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv3/ospfv3_tests.py:TestOspfv3OspfRoutePref.run_test
+
+/mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/
+
+simpledeploy -d mlx-2100-08 -i /mnt/cl-builds/CumulusLinux-5_dev/passed-mlx-amd64/build/images/cumulus-linux-mlx-amd64.bin
+simpledeploy -d mlx-2100-04 -i /mnt/cl-builds/CumulusLinux-5_dev/latest-mlx-amd64/build/images/cumulus-linux-mlx-amd64.bin
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py -t unsupported -T mpls.txt -r summary.txt -d mlx2100-01
+ mlx-4700a1-08
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/general/quagga_reload_test.py:QuaggaReloadTest.test2_static_routes -d mlx-2100a1-04
+
+Test Case: test_files.l3.general.quagga_reload_test.QuaggaReloadTest.test2_static_routes
+ssh-keygen -f "/labhome/kkodandarama/.ssh/known_hosts" -R "mlx-2100-01"
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-mlx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/l3/general/quagga_reload_test.py:QuaggaReloadTest.test2_static_routes -d mlx-2100-01
+
+test_files.ui.nclu.nclu_snmp_tests.SnmpBasicNcluTests.test_10_verify_trap_link_updown_ports
+
+test_files.ui.nclu.nclu_snmp_tests.SnmpBasicNcluTests.test_10_verify_trap_link_updown_ports
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/ui/nclu/nclu_snmp_tests.py:SnmpBasicNcluTests.test_10_verify_trap_link_updown_ports -d mlx-2100-08
+
+Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfConfig.test_redistribution_between_instances to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_redistribution_between_instances
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_redistribution_between_instances -T notsupported/test_redistribution_between_instances.txt
+
+MultipathConfig
+test_redistribution
+
+test_configuration_adjacency
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_redistribution
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_configuration_adjacency -T notsupported/test_configuration_adjacency
+
+
+test_redistribution_between_instances
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_configuration_adjacency
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_redistribution
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfConfig.test_configuration_adjacency
+
+.TestMiOspfUnnumberedConfig.test_ospf_unnumbered_adjacency_cl_commands to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfUnnumberedConfig.test_ospf_unnumbered_adjacency_cl_commands 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfUnnumberedConfig.test_ospf_unnumbered_adjacency_cl_commands -T notsupported/test_ospf_unnumbered_adjacency_cl_commands.txt
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfUnnumberedConfig.test_loopback_unnumbered_configuration_adjacency
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestMiOspfUnnumberedConfig.test_loopback_unnumbered_configuration_adjacency
+
+test_loopback_unnumbered_configuration_adjacency
+TestOspfUnnumberedEcmpForwarding
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ nv/cl-tests/tests/l3/ospf/ospfv2/miospf_tests.py:TestOspfUnnumberedEcmpForwarding.run_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv2/miospf_tests.py:TestOspfUnnumberedEcmpForwarding.run_test -T notsupported/TestOspfUnnumberedEcmpForwarding
+
+NC-487,NC-488,NC-1397,NC-342,NC-1091,NC-561
+
+ ip ospf dead-interval 3
+ ip ospf hello-interval 1
+  neighbor 210.3.2.6 remote-as 600
+  neighbor 210.3.2.6 shutdown
+router bgp 100 vrf default
+
+./nv/cl-tests/tests/configs/Ospf6RouteRefreshConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+./ssim3-snmp/ssim3/cl-tests/test_files/configs/Ospf6RouteRefreshConfig.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ --vx-img --start
+
+
+./ssim3-general/ssim3/cl-tests/test_files/configs/NvidiaGeForceConfigNew.py --vm-base-dir /mnt/cl-builds/CumulusLinux-5_dev/passed-vx-qa-amd64/images/ --vx-img --start
+
+Test: Convert tests.l3.ospf.ospfv3.ospfv3_tests.TestOspfv3MultipathFromAbrs.run_test to NVUE
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/ospfv3_tests.py:TestOspfv3MultipathFromAbrs.run_test -d mlx-2100-08
+
+
+Convert tests.l3.ospf.ospfv3.test_ospf6_route_thrash.TestMain.run_test to NVUE
+
+
+sts.l3.ospf.ospfv3.test_ospf6_route_thrash.TestMain.run_test
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/ospf/ospfv3/test_ospf6_route_thrash.py:TestMain.run_test -T notsupported/test_ospf6_route_thrash.txt
+
+
+Test: Convert tests.l3.bgp.bgp_knobs_test.TestNexthopUnchangedRouteMap.run_test to NVUE
+Convert tests.l3.bgp.bgp_knobs_test.TestRedistributionStaticV4V6Bgp.run_test 
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/bgp/bgp_knobs_test.py:TestRedistributionStaticV4V6Bgp.run_test 
+
+TestNexthopUnchangedFlag
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ nv/cl-tests/tests/l3/bgp/bgp_knobs_test.py:TestNexthopUnchangedFlag.run_test 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/bgp/bgp_knobs_test.py:TestNexthopUnchangedFlag.run_test 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/bgp/bgp_knobs_test.py:TestNexthopUnchangedFlag.run_test 
+
+
+
+address-family ipv4 unicast
+    neighbor 210.4.1.4 attribute-unchanged next-hop
+    neighbor 2210:210:4:1::4 attribute-unchanged next-hop
+
+  address-family ipv6 unicast
+    neighbor 210.2.0.2 activate
+    neighbor 210.4.1.4 activate
+    neighbor 210.4.1.4 attribute-unchanged next-hop
+    neighbor 2001:20::2 activate
+    neighbor 2210:210:4:1::4 activate
+    neighbor 2210:210:4:1::4 attribute-unchanged next-hop
+
+
+
+TestNexthopUnchangedRouteMap
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/bgp/bgp_knobs_test.py:TestNexthopUnchangedRouteMap.run_test 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ nv/cl-tests/tests/l3/bgp/bgp_knobs_test.py:TestNexthopUnchangedRouteMap.run_test 
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ nv/cl-tests/tests/l3/ospf/ospfv3/test_ospf6_route_thrash.py:TestMain.run_test 
+
+ address-family ipv4 unicast
+neighbor 210.4.1.4 route-map nh_unchanged out
+    neighbor 2210:210:4:1::4 route-map nh_unchanged out
+	
+tests.l3.general.switchd_incr_route_neigh_test.TestNvidiaGeForceFunctional
+test03_nvidia_geforce_func_post_peerlink_flap
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/l3/general/switchd_incr_route_neigh_test.py:TestNvidiaGeForceFunctional.test03_nvidia_geforce_func_post_peerlink_flap -d mlx-2100-06 -T general1.txt
+
+
+/labhome/kkodandarama/nv/cl-tests/tests/l3/general/testroutes2.py
+[Yesterday 20:52] Krishnabalan Kodandaraman
+
+
+
+
+hi this are the tc are completed 
+
+
+ https://gitlab-master.nvidia.com/nbu-sws/CL/testing/ssim3/-/merge_requests/new?merge_request%5Bsource_branch%5D=mpls
+
+Test2647183.run_test
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/general/testroutes2.py:TestFullRoutes.run_test -d mlx-2100-08 -T notsupported/TestFullRoutes.txt
+
+t tests.l2.general.testcommands.CommandTest.test_brctl to NVUE
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l2/general/testcommands.py:CommandTest.test_brctl 
+: Convert tests.l3.general.testroutes2.TestPrecommitRoutes.run_test to NVUE
+
+
+general.new_bridge_driver_test.IntflapUpDownTest to NVUE
+.NewBridgeDriverTrafficTest to NVUE
+
+test_012_after_reboot_check_bridge_vlan_show_cmd fail
+
+test_013_verify_vlan_membership_after_ifreload
+test_024_ping_bridge_trunk_vlan5_known_unicast_fdb_show
+test_025_ping_bridge_trunk_vlan8_known_unicast_fdb_show
+test_026_ping_bridge_trunk_vlan9_known_unicast_fdb_show
+test_027_ping_bridge_trunk_vlan10_known_unicast_fdb_show
+test_028_ping_bridge_trunk_vlan11_known_unicast_fdb_show
+test_029_ping_bridge_trunk_vlan12_known_unicast_fdb_show
+
+test_032_ping_bridge_trunk_vlan5_unknown_unicast_fdb_show
+test_033_ping_bridge_trunk_vlan8_unknown_unicast_fdb_show
+test_034_ping_bridge_trunk_vlan9_unknown_unicast_fdb_show
+ expDict1 = {'OIf':list(self.topo.sw.config.get_bond_interfaces().values())[0].name, 'type': 'dynamic'}
+        mac1 = get_mac_addr(self.topo.host1, list(self.topo.sw.config.get_bond_interfaces().values())[0].name,flag = ['notvlan'],nvue_enabled=True)
+        errors = bridge_fdb_show_verify(list(self.topo.sw.config.get_bridge_interfaces().values())[0].name,self.topo.sw, expDict1, mac1, 2)
+        tc_errors.append(errors)
+		
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l2/general/new_bridge_driver_test.py:NewBridgeDriverTrafficTest.test_034_ping_bridge_trunk_vlan9_unknown_unicast_fdb_show -T notsupported/test_034_ping_bridge_trunk_vlan9_unknown_unicast_fdb_show.txt
+
+Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistributionTableNeighbor.run_test 
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ nv/ssim3/cl-tests/tests/l3/general/redist_table_neighbor_test.py:TestRedistributionTableNeighbor.run_test
+
+Test: Convert tests.l3.general.testroutes2.TestPrecommitRoutes.run_test to NVUE
+Test: Convert tests.l3.general.testroutes2.TestFullRoutes.run_test to NVUE
+Test: Convert tests.l3.general.testroutes2.TestSmokeRoutes.run_test to NVUE
+Test: Convert tests.l3.general.testroutes2.Test2647183.run_test to NVUE
+: Convert tests.l3.general.redist_table_neighbor_test.TestRedistributionTableNeighbor.run_test to NVUE
+Test: Convert tests.l3.bgp.bgp_knobs_test.TestNexthopUnchangedRouteMap.run_test to NVUE
+Test: Convert tests.l3.bgp.bgp_knobs_test.TestNexthopUnchangedFlag.run_test to NVUE
+
+
+tests.l3.general.switchd_incr_route_neigh_test.TestNvidiaGeForceFunctional
+test03_nvidia_geforce_func_post_peerlink_flap
+test01_nvidia_geforce_functional
+test02_nvidia_geforce_func_post_uplink_bond_flap
+test021_nvidia_geforce_func_with_local_bond_flap fail
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/l3/general/switchd_incr_route_neigh_test.py:TestNvidiaGeForceFunctional.test021_nvidia_geforce_func_with_local_bond_flap -T notsupported/test021_nvidia_geforce_func_with_local_bond_flap.txt -d mlx-2740-04
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/test_files/l3/general/switchd_incr_route_neigh_test.py:TestNvidiaGeForceFunctional.test02_nvidia_geforce_func_post_uplink_bond_flap -T gp.txt -d mlx-2100-06
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-snmp/ssim3/cl-tests/test_files/l3/general/redist_table_neighbor_test.py:TestRedistributionTableNeighbor.run_test -d mlx-2740-04 -T notsupported/TestRedistributionTableNeighbor.txt
+
+
+ip import-table 10 distance 31
+ip import-table 70
+ip import-table 80
+ip import-table 90
+ip import-table 100
+
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5_dev/latest-vx-qa-amd64/build/images/ ssim3-general/ssim3/cl-tests/tests/l3/ospf/ospfv3/abr_ospfv3_tests.py:TestOspfv3RangeConfig.test_ospfv3_change_summary_cost
+
+tests.l3.ospf.ospfv3.abr_ospfv3_tests.TestOspfv3RangeConfig.test_ospfv3_change_summary_cost
+
+	test_ospfv3_change_summary_cost
+
+ provision_miospf(n1, (1, 2, 3, 4, 5))
+*** autolib.netobjects.CommandExecutionError: Got the following error trying to execute sudo bash -c " echo 'ospfd=yes
+ospfd_instances="1 2 3 4 5"' >> /etc/frr/daemons": Encountered a bad command exit code!
+
+ Convert tests.l3.general.testroutes2.TestFullRoutes.run_test to NVUE
+
+Command: 'sudo bash -c " echo \'ospfd=yes\nospfd_instances="1 2 3 4 5"\' >> /etc/frr/daemons"'
+
+Exit code: 1
+
+Stdout:
+
+
+
+Stderr:
+
+2: -c: line 0: unexpected EOF while looking for matching `''
+2: -c: line 2: syntax error: unexpected end of file
+
+
+NC-1397 Test: Convert tests.l3.general.testroutes2.TestFullRoutes.run_test to NVUE
+NC-1091 Test: Convert tests.l3.ospf.ospfv3.test_ospf6_route_thrash.TestMain.run_test to NVUE
+NC-617  Test: Convert tests.l3.bgp.bgp_knobs_test.TestNexthopUnchangedFlag.run_test to NVUE
+NC-561  Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestOspfUnnumberedEcmpForwarding.run_test to NVUE
+	
+NC-554 Test: Convert tests.l3.bgp.bgp_knobs_test.TestNexthopUnchangedRouteMap.run_test to NVUE
+NC-488 Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfUnnumberedConfig.test_ospf_unnumbered_adjacency_cl_commands to NVUE
+NC-487 Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfUnnumberedConfig.test_loopback_unnumbered_configuration_adjacency to NVUE
+NC-369 Test: Convert tests.l3.bgp.bgp_knobs_test.TestRedistributionStaticV4V6Bgp.run_test to NVUE
+NC-344 Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfConfig.test_redistribution_between_instances to NVUE
+NC-343 Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfConfig.test_redistribution to NVUE
+NC-342 Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfConfig.test_configuration_adjacency to NVUE
+NC-214 Test: Convert tests.l3.general.redist_table_neighbor_test.TestRedistributionTableNeighbor.run_test to NVUE
+
+NC-898 Test: Convert tests.l3.general.testroutes2.Test2647183.run_test to NVUE
+NC-711 Test: Convert tests.l2.general.new_bridge_driver_test.NewBridgeDriverTrafficTest to NVUE
+NC-583 Test: Convert tests.l3.general.testroutes2.TestSmokeRoutes.run_test to NVUE
+NC-319 Test: Convert tests.l2.general.testcommands.CommandTest.test_brctl to NVUE
+NC-286 Test: Convert tests.l3.general.testroutes2.TestPrecommitRoutes.run_test to NVUE
+NC-219 Test: Convert tests.l3.general.switchd_incr_route_neigh_test.TestNvidiaGeForceFunctional to NVUE(5)
+NC-1412 Test: Convert tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test15_static_pat_phy_if_acl_match_tcp_5_tuple to NVUE
+NC-1411 Test: Convert tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test14_static_pat_phy_if_acl_match_udp_5_tuple to NVUE
+NC-1410 Test: Convert tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test13_static_pat_phy_if_acl_match_on_wan_iface_sip_and_sport to NVUE
+NC-1409 Test: Convert tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test11_static_nat_with_non_directed_host_next_hop_link_flap to NVUE
+NC-1408 Test: Convert tests.l3.nat.nat_test.TestStaticNatAndPatPhyIfConfig.test10_static_nat_with_directly_connected_host_link_flap to NVUE
+
+
+Test: Convert tests.ui.nclu.nclu_ospf_test.NcluOspfTest.test7_completeospfv3 to NVUE
+Test: Convert tests.l3.ospf.ospfv3.abr_ospfv3_tests.TestOspfv3RangeConfig.test_ospfv3_restore_non_default_cost_blackhole to NVUE
+Test: Convert tests.l3.ospf.ospfv2.miospf_tests.TestMiOspfUnnumberedConfig.test_ospf_unnumbered_adjacency_cl_commands to NVUE
+Test: Convert tests.l3.ospf.ospfv3.ospfv3_tests.TestAbrConfig.test_ospfv3_non_backbone_summary to NVUE
+Test: Convert tests.l3.ospf.ospfv3.abr_ospfv3_tests.TestOspfv3Config.test_ospv3_remove_route_check to NVUE
+Test: Convert tests.l3.ospf.ospfv3.ospfv3_tests.TestAbrMultipleAreasConfig.test_ospfv3_change_interface_address to NVUE
+
+test_013_iplinkdownup_port_verify_bridge_vlan_show_test
+test_019_ifupdown_bond_verify_bridge_vlan_show_test
+test_018_ifupdown_port_verify_bridge_vlan_show_test fail
+test_017_ifupdown_bridgeinterface_verify_bridge_vlan_show_test
+test_016_ifconfig_bridgeinterface_verify_bridge_vlan_show_test
+test_015_iplinkdownup_bridgeinterface_verify_bridge_vlan_show_test fail
+
+tests.l2.general.new_bridge_driver_test.IntflapUpDownTest
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l2/general/new_bridge_driver_test.py:IntflapUpDownTest.test_013_iplinkdownup_port_verify_bridge_vlan_show_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l2/general/new_bridge_driver_test.py:IntflapUpDownTest.test_019_ifupdown_bond_verify_bridge_vlan_show_test
+
+runtests.sh --vx-img -i /mnt/cl-builds/CumulusLinux-5.4.0_release/passed-vx-qa-amd64/images/ ssim3-snmp/ssim3/cl-tests/test_files/l2/general/new_bridge_driver_test.py:IntflapUpDownTest.test_015_iplinkdownup_bridgeinterface_verify_bridge_vlan_show_test
+
+NC-369,NC-554,NC-344,NC-343,NC-1091
+
+ https://gitlab-master.nvidia.com/nbu-sws/CL/testing/ssim3/-/merge_requests/new?merge_request%5Bsource_branch%5D=ospf
+
+ /labhome/kkodandarama/ssim3-general/ssim3/cl-tests/test_files/configs/MplsConfig.py
+ /labhome/kkodandarama/ssim3-general/ssim3/cl-tests/test_files/l3/clrouterlibs.py
+ /labhome/kkodandarama/ssim3-general/ssim3/cl-tests/test_files/l3/tunneling/mpls/nclu_mpls_test.py
+ /labhome/kkodandarama/ssim3-general/ssim3/cl-tests/test_files/specs/MplsTopoSpec.py
+=========================
+
+ip prefix-list bgp_pfx_filter seq 5 permit 30.8.0.0/16 le 32
+ip prefix-list kernel_pfx_filter seq 5 permit 70.8.0.0/16 le 32
+ip prefix-list static_pfx_filter seq 5 permit 50.8.0.0/16 le 32
+ip prefix-list dropall seq 5 deny any
+!
+route-map redist_bgp permit 10
+ match ip address prefix-list bgp_pfx_filter
+ set tag 50001
+!
+route-map redist_bgp permit 20
+ match ip address prefix-list dropall
+!
+route-map redist_kernel permit 10
+ match ip address prefix-list kernel_pfx_filter
+ set tag 50003
+!
+route-map redist_kernel permit 20
+ match ip address prefix-list dropall
+!
+route-map redist_static permit 10
+ match ip address prefix-list static_pfx_filter
+ set tag 50002
+!
+route-map redist_static permit 20
+ match ip address prefix-list dropall
+!
+route-map redist_set_tag permit 10
+ set tag 50000
+!
